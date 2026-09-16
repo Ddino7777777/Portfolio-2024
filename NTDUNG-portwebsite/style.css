@@ -1,0 +1,181 @@
+body {align-content: center; margin-left: 120px; margin-right: 120px;}
+.sticky {position: sticky; top: 0; z-index: 99;}
+
+#bg{
+display: flex;
+width: 148px;
+height: 140px;
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+}
+/* pt.1 text animation */
+  /* Core functionality */
+#animated-text-strip{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: start;
+  overflow: hidden;
+  margin-bottom: 94px;
+}
+#animated-text-strip .marquee {
+  white-space: nowrap;
+  animation: marquee 3s linear infinite;
+  max-width: none;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+/* Styles for the sake of the demonstration */
+#animated-text-strip{
+  background:black;
+  padding: 1rem 0;
+}
+.marquee{
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: white;
+}
+
+#animated-text-strip-1{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: start;
+  overflow: hidden;
+  margin-bottom: 94px;
+}
+#animated-text-strip-1 .marquee1 {
+  white-space: nowrap;
+  animation: marquee1 3s linear infinite;
+  max-width: none;
+}
+
+@keyframes marquee1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+/* Styles for the sake of the demonstration */
+#animated-text-strip-1{
+  background: none;
+  padding: 1rem 0;
+}
+.marquee1{
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #101010;
+}
+
+
+/* pt.2 effect */ 
+#textscroll {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lexend Zetta', sans-serif;
+  font-weight: 500;
+  background-color: none;
+  margin: 256px;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 546px;}
+
+.text {
+  font-size: 98px;
+  letter-spacing: -.01em;
+  line-height: 100%;
+  margin: 0;
+
+  width: 100%;
+  color: #101010;
+  background: linear-gradient(to right, #ffffff, #ffffff) no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 0%;
+  transition: background-size cubic-bezier(.1,.5,.5,1) 0.5s;
+
+  border-bottom: 1px solid #2F2B28;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;}
+
+span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #b00820;
+  color: #ffffff;
+
+  clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+  transform-origin: center;
+  transition: all cubic-bezier(.1,.5,.5,1) 0.4s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;}
+
+.text:hover > span {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);}
+
+a {
+  text-decoration: none;
+  color: inherit;}
+}
+
+/* pt.3 content */
+.info {display: flex;
+  width: 1920px;
+  padding: 0px 544px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 31px;}
+
+h1  {
+  font-family: "Lexend Zetta", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+
+  font-style: normal; }
+h2 {
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: #b00820;}
+h4 {
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;}
+p {
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;}
+
+.content {display: flex; height: 0 auto; padding: 40px; margin-bottom: 14px;}
+.content-left {width: 68%; height: 0 auto; width: 1152px; padding: 25px;}
+.content-left-post { display: flex;}
+.content-left-post-image img {width: 100%; height: 100%; object-fit: cover;}
+.content-right {width: 32%; height: 0 auto; width: 580px; display: flex; padding: 25px;}
+.content-right-tittle h2 {line-height: 24px;}
+.content-right-text p {line-height: 20px;}
+
+/* pt.4 hover */
